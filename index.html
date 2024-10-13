@@ -8,7 +8,7 @@
       body {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between; /* Changed to space elements between */
         align-items: center;
         height: 100vh;
         margin: 0;
@@ -33,22 +33,53 @@
       .container {
         text-align: center;
         color: #333;
+        margin-top: 20px; /* Added to give space above content */
       }
 
-      .hourglass {
+      .ice-cube {
         font-size: 100px;
+        animation: pulse 1.5s infinite; /* Changed to pulse animation */
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1); /* Original size */
+        }
+        50% {
+          transform: scale(1.1); /* Slightly larger */
+        }
+        100% {
+          transform: scale(1); /* Back to original size */
+        }
       }
 
       .message {
         margin-top: 20px;
         font-size: 18px;
       }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none; /* Remove underline from link */
+        margin-bottom: 20px; /* Added margin for spacing from bottom */
+      }
+
+      .button:hover {
+        background-color: #5b5b5b; /* Darker on hover */
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="hourglass">⏳</div>
-      <div class="message">This site is still in beta! Check back later!</div>
+      <div class="ice-cube">🧊</div>
+      <div class="message">v1: Released Ice Social Once Again on IceSocial.net</div>
     </div>
+    <a href="https://icesocial.net" class="button">Check Out Ice Social</a> <!-- Button is now at the bottom -->
   </body>
 </html>
